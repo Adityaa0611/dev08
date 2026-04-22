@@ -1,0 +1,29 @@
+public class calc {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int sub(int a, int b) {
+        return a - b;
+    }
+
+    public int mul(int a, int b) {
+        return a * b;
+    }
+
+    public int div(int a, int b) {
+        if (b == 0)
+            throw new ArithmeticException("Cannot divide by zero");
+        return a / b;
+    }
+
+    public static void main(String[] args) {
+        calc c = new calc();
+
+        System.out.println("Addition: " + c.add(10, 5));
+        System.out.println("Subtraction: " + c.sub(10, 5));
+        System.out.println("Multiplication: " + c.mul(10, 5));
+        System.out.println("Division: " + c.div(10, 5));
+    }
+
+}
